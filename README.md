@@ -8,3 +8,7 @@ O projeto visa desenvolver um site que permita aos usuários gerar gráficos e a
 - JavaScript
 - Python
 - R
+
+# Esquema:
+![site-analisador](https://github.com/cleberaksenen/site-analisador/assets/98467661/a40d8fb2-4a7f-447f-84bb-b2e56c20a257)
+
