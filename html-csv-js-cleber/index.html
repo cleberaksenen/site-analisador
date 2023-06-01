@@ -3,10 +3,10 @@
 <head>
   <title>Importar arquivo CSV</title>
   <link rel="stylesheet" href="main.css" /> <!-- CSS -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js -->
-  <script src="chartjs-chart-box-and-violin-plot.js"></script> <!-- Box and Violin Plot -->
   <script src="main.js"></script> <!-- JavaScript -->
 </head>
+
+
 <body>
   <h1 style="color: #03396c">Programa para importação de dados</h1>
 
@@ -18,15 +18,16 @@
     </label>
   </div>
 
-  <!-- Botão para gerar o boxplot -->
-  <button id="boxplot-button">Gerar Boxplot</button>
-
-  <!-- Etapa para salvar as informações do arquivo.csv -->
-  <table id="data-table"></table>
-
   <script>
     document.getElementById('file-input').addEventListener('change', handleFileSelect, false);
     document.getElementById('boxplot-button').addEventListener('click', generateBoxplot, false);
   </script>
+
+  <!-- Etapa para salvar as informações do arquivo.csv -->
+  <table id="data-table"></table>
+
+  <!-- Botão para gerar o boxplot -->
+  <button id="boxplot-button">Gerar Boxplot</button>
+ 
 </body>
 </html>
