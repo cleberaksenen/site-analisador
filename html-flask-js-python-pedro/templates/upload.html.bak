@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload de Planilha</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#chart_type').change(function() {
+                var selectedOption = $(this).children('option:selected').val();
+                if (selectedOption === 'line') {
+                    $('#chart-preview').attr('src', '/chart?type=line');
+                } else if (selectedOption === 'bar') {
+                    $('#chart-preview').attr('src', '/chart?type=bar');
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Upload de Planilha</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".xlsx, .xls">
+        <label> <span> Escolher arquivo </span>  
+		for="chart_type">Tipo de Gráfico:</label>
+        <select name="chart_type" id="chart_type">
+            <option value="line">Linha</option>
+            <option value="bar">Barras</option>
+        </select>
+        <input type="submit" value="Enviar">
+    </form>
+    <div>
+        <h2>Pré-visualização do Gráfico</h2>
+        <img id="chart-preview" src="" alt="Gráfico" style="width: 400px; height: auto;">
+    </div>
+</body>
+</html>
