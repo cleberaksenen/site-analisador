@@ -13,23 +13,45 @@
                     $('#chart-preview').attr('src', '/chart?type=bar');
                 }
             });
+            
+            $('form').submit(function(e) {
+                var x_axis = $('#x_axis').val();
+                var y_axis = $('#y_axis').val();
+                var x_planilha = $('#x_planilha').val();
+                var y_planilha = $('#y_planilha').val();
+                var fileInput = $('#file').get(0);
+                
+                if (x_axis === '' || y_axis === '' || x_planilha === '' || y_planilha === '' || fileInput.files.length === 0) {
+                    e.preventDefault();
+                    alert('Por favor, preencha todos os campos e selecione um arquivo para upload.');
+                }
+            });
         });
     </script>
 </head>
 <body>
     <h1>Upload de Planilha</h1>
     <form method="POST" enctype="multipart/form-data">
-        <input type="file" name="file" accept=".xlsx, .xls">
+        <input type="file" name="file" accept=".xlsx, .xls" id="file">
         <label for="chart_type">Tipo de Gráfico:</label>
         <select name="chart_type" id="chart_type">
             <option value="line">Linha</option>
             <option value="bar">Barras</option>
         </select>
+        <br>
+		<label for="x_planilha">Nome do Eixo X na planilha:</label>
+        <input type="text" id="x_planilha" name="x_planilha" value="x">
+        <br>
+        <label for="y_planilha">Nome do Eixo Y na planilha:</label>
+        <input type="text" id="y_planilha" name="y_planilha" value="y">
+        <br>
+        <label for="x_axis">Nome do Eixo X:</label>
+        <input type="text" id="x_axis" name="x_axis" value="X">
+        <br>
+        <label for="y_axis">Nome do Eixo Y:</label>
+        <input type="text" id="y_axis" name="y_axis" value="Y">
+        <br>
         <input type="submit" value="Enviar">
     </form>
-    <div>
-        <h2>Pré-visualização do Gráfico</h2>
-        <img id="chart-preview" src="" alt="Gráfico" style="width: 400px; height: auto;">
-    </div>
 </body>
 </html>
