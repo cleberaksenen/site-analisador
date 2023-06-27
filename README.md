@@ -10,6 +10,7 @@ O projeto visa desenvolver um site que permita aos usuários gerar gráficos e a
 - R
 
 # Esquema:
-![image](https://github.com/cleberaksenen/site-analisador/assets/98467661/b31d7b4c-b911-4eb7-8d05-0f255831ebdf)
+![image](https://github.com/cleberaksenen/site-analisador/assets/98467661/b5613dae-4b97-415e-91e9-b5efb1e3c840)
+
 
 
